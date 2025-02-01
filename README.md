@@ -11,6 +11,27 @@ requirements.
 > series. This code is _not_ designed for direct production usage. If you're looking for code you can use directly in
 > production, check out the [Gruntwork Library](https://www.gruntwork.io/products/library).
 
+## Quick start
+
+All the real modules in this repo are in the `/modules` sub-folder. To use version `<VERSION>` of module 
+`<MODULE_NAME>` from chapter `<CHAPTER>`:
+
+```terraform
+module "<NAME>" {
+  source  = "brikis98/devops/book//modules/<CHAPTER>/<MODULE_NAME>"
+  version = "<VERSION>"
+}
+```
+
+For example, to use version 1.0.0 of the `ec2-instance` module from chapter 2:
+
+```terraform
+module "ec2_instance" {
+  source  = "brikis98/devops/book//modules/ch2/ec2-instance"
+  version = "1.0.0"
+}
+```
+
 ## License
 
 This code is released under the MIT License. See [LICENSE.txt](./LICENSE.txt).
