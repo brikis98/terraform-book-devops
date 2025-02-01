@@ -1,7 +1,7 @@
 # _Fundamentals of DevOps and Software Delivery_ OpenTofu/Terraform  Modules
 
-This repo contains the OpenTofu/Terraform modules for the book and blog post series [_Fundamentals of DevOps and Software
-Delivery_](https://www.fundamentals-of-devops.com) by Yevgeniy Brikman. The full sample code for the book is in another repo,
+This repo contains the reusable OpenTofu/Terraform modules for the book and blog post series [_Fundamentals of DevOps 
+and Software Delivery_](https://www.fundamentals-of-devops.com) by Yevgeniy Brikman. The full sample code for the book is in another repo,
 https://github.com/brikis98/devops-book, but in order to make the modules available in the OpenTofu and Terraform 
 registries, the repo must be named `terraform-<provider>-<module>`, so this repo exists solely to meet those naming
 requirements.
