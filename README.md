@@ -14,20 +14,20 @@ requirements.
 ## Quick start
 
 All the real modules in this repo are in the `/modules` sub-folder. To use version `<VERSION>` of module 
-`<MODULE_NAME>` from chapter `<CHAPTER>`:
+`<MODULE_NAME>`:
 
 ```terraform
 module "<NAME>" {
-  source  = "brikis98/devops/book//modules/<CHAPTER>/<MODULE_NAME>"
+  source  = "brikis98/devops/book//modules/<MODULE_NAME>"
   version = "<VERSION>"
 }
 ```
 
-For example, to use version 1.0.0 of the `ec2-instance` module from chapter 2:
+For example, to use version 1.0.0 of the `ec2-instance` module:
 
 ```terraform
 module "ec2_instance" {
-  source  = "brikis98/devops/book//modules/ch2/ec2-instance"
+  source  = "brikis98/devops/book//modules/ec2-instance"
   version = "1.0.0"
 }
 ```
