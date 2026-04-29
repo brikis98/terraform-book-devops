@@ -61,3 +61,22 @@ resource "aws_lambda_function_url" "url" {
   function_name      = aws_lambda_function.function.function_name
   authorization_type = "NONE"
 }
+
+resource "aws_lambda_permission" "allow_invoke_function" {
+  count = var.create_url ? 1 : 0
+
+  function_name = aws_lambda_function.function.function_name
+  statement_id  = "AllowInvokeFunction"
+  action        = "lambda:InvokeFunction"
+  principal     = "*"
+}
+
+resource "aws_lambda_permission" "allow_invoke_function_url" {
+  count = var.create_url ? 1 : 0
+
+  function_name          = aws_lambda_function.function.function_name
+  statement_id           = "AllowInvokeFunctionUrl"
+  action                 = "lambda:InvokeFunctionUrl"
+  principal              = "*"
+  function_url_auth_type = "NONE"
+}
